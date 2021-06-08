@@ -1,4 +1,4 @@
-package br.org.habilidades.blogpessoal.model;
+package br.org.generation.gaymes.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "tb_usuario")
 public class Usuario {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
@@ -59,6 +59,5 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
+
 }

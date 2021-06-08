@@ -1,4 +1,4 @@
-package br.org.habilidades.blogpessoal.controller;
+package br.org.generation.gaymes.controller;
 
 import java.util.Optional;
 
@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.org.habilidades.blogpessoal.model.UserLogin;
-import br.org.habilidades.blogpessoal.model.Usuario;
-import br.org.habilidades.blogpessoal.service.UsuarioService;
+import br.org.generation.gaymes.model.UserLogin;
+import br.org.generation.gaymes.model.Usuario;
+import br.org.generation.gaymes.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
-
+	
 	@Autowired
 	private UsuarioService usuarioService;
 	
@@ -34,6 +34,5 @@ public class UsuarioController {
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(usuarioService.CadastrarUsuario(usuario));
 	}
-	
-}
 
+}
