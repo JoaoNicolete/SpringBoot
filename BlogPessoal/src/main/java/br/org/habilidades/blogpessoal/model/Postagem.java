@@ -39,6 +39,22 @@ public class Postagem {
 	private Tema tema;
 
 	
+	public Postagem(long id, @NotNull @Size(min = 5, max = 100) String titulo,
+			@NotNull @Size(min = 10, max = 500) String texto, Date data, Tema tema) {
+		super();
+		this.id = id;
+		this.titulo = titulo;
+		this.texto = texto;
+		this.data = data;
+		this.tema = tema;
+	}
+	
+	public Postagem() {
+		super();
+	}
+
+
+
 	public long getId() {
 		return id;
 	}
